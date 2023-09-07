@@ -4,8 +4,8 @@ import Image from "next/image";
 import { useState } from "react";
 
 import { CarCardProps } from "@/types";
-import { calculateCarRent } from "@/utils";
 import { CarDetails, CustomButton } from ".";
+import { calculateCarRent, generateCarImageUrl } from "@/utils";
 
 const CarCard = ({ car }: { car: CarCardProps }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,7 +32,7 @@ const CarCard = ({ car }: { car: CarCardProps }) => {
         <Image
           fill
           priority
-          src="/hero.png"
+          src={generateCarImageUrl(car)}
           alt="car model"
           className="object-contain"
         />

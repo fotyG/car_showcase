@@ -29,3 +29,30 @@ export interface CarCardProps {
   transmission: string;
   year: number;
 }
+
+export interface FilterProps {
+  year: number;
+  fuel: string;
+  model: string;
+  limit: number;
+  manufacturer: string;
+}
+
+export interface HomeProps {
+  searchParams: FilterProps;
+}
+
+export interface OptionProps {
+  title: string;
+  value: string;
+}
+
+export interface CustomFilterProps {
+  title: string;
+  options: OptionProps[];
+}
+
+export interface ShowMoreProps {
+  isNext: boolean;
+  pageNumber: number;
+}
